@@ -2,7 +2,6 @@ import React from 'react'
 import type { ExpandedHeroTree } from '../../../lib/locales'
 import { act, can, fill } from '../../../lib/locales/runtimeUtils'
 import { wallet } from "../../near"
-import Slider from '../slider'
 import Section from '../section'
 import Markdown from "../markdown"
 import useHeroStatuses from '../../hooks/useHeroStatuses'
@@ -38,54 +37,21 @@ const Hero: React.FC<{ heroTree: ExpandedHeroTree }> = ({ heroTree }) => {
         loading: "eager",
         alt: "",
       }}
-      video={!hero.video ? undefined : {
-        src: hero.video,
-        loop: true,
-        autoPlay: true,
-      }}
+      
     >
-      <div className={css.content}>
-        {can(hero.action, data) && (
-          <form onSubmit={e => {
-            e.preventDefault()
-            act(hero.action, { ...data, numberToMint })
-          }}>
-            {hero.setNumber && (
-              <>
-                <div className={css.labelWrap}>
-                  <label className={css.label} htmlFor="numberToMint">
-                    {hero.setNumber}
-                  </label>
-                  <div className={css.remaining}>
-                    {fill(hero.remaining, data)}
-                  </div>
-                </div>
-                <Slider
-                  max={Math.min(
-                    tenkData.remainingAllowance ?? tenkData.mintRateLimit,
-                    tenkData.mintRateLimit
-                  )}
-                  min={1}
-                  name="numberToMint"
-                  onValueChange={([v]) => setNumberToMint(v)}
-                  value={[numberToMint]}
-                />
-              </>
-            )}
-            <button className={css.cta}>
-              {fill(hero.cta, { ...data, numberToMint })}
-            </button>
-          </form>
-        )}
-        <div>
-          <h1>{locale.title}</h1>
-          <Markdown children={fill(hero.title, data)} components={{ p: 'h2' }} />
-          <div className={css.lead}>
-            <Markdown children={fill(hero.body, data)} />
-          </div>
-          {hero.ps && <Markdown children={fill(hero.ps, data)} />}
-        </div>
-      </div>
+      <Markdown children={fill(hero.title, data)} components={{ p: 'h1' }} />
+      <Markdown children={fill(hero.body, data)} />
+      {hero.ps && <Markdown children={fill(hero.ps, data)} />}
+      {can(hero.action, data) && (
+        <form onSubmit={e => {
+          e.preventDefault()
+          act(hero.action, { ...data, numberToMint })
+        }}>
+          <button className={css.cta}>
+            {fill(hero.cta, { ...data, numberToMint })}
+          </button>
+        </form>
+      )}
     </Section>
   )
 }

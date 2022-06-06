@@ -1,7 +1,7 @@
 {
   "viewIn": "View in English",
   "langPicker": "English",
-  "title": "Cool NFT Project",
+  "title": "CATTYVERSE PADDOCK CLUB",
   "description": "This is the minting page for Cool NFT Project",
   "calendarEvent": "Go Mint an NFT!",
   "connectWallet": "Login with NEAR",
@@ -14,9 +14,9 @@
   "zoomIn": "Zoom In",
   "zoomOut": "Zoom Out",
   "hero": {
-    "video": "3d_toys_playground.mp4",
+    "video": "hero-video.mp4",
     "title": "NFTs drop at SALE_START!",
-    "body": "Tagline goes here.",
+    "body": "Let's purrrr together in this crazy world with Cattyverse.",
     "remaining": "REMAINING_COUNT / INITIAL_COUNT left",
     "cta": "Add to Calendar",
     "action": "ADD_TO_CALENDAR(SALE_START)",
@@ -62,9 +62,19 @@
   },
   "extraSections": [
     {
-      "className": "this-class-is-set-in-i18n-files",
-      "text": "# Introducing Cool NFT Project\n\nThis is a longer description of the project. About a paragraph long. Some [filler text](https://placehodler.shapelabs.co/) to demonstrate: Token standard surrendered some burned mnemonic phrase until some wallet because blockchain detected many pre-mine. It based on many automated token generation event, and when Tether formed some trustless in the FUD, Dogecoin slept on lots of anti-money laundering of many stale block!\n\nSolidity limited lots of reinvested distributed denial of service attack! ICO specialises in lots of lightning fast private chain since Zilliqa surrendered few reinvested cryptocurrency, however, because someone limited few provably fiat until the vanity address, Augur stuck many burned pre-mine. They sharded many technical analysis, or NFT specialises in the FOMO in few wash trade.",
-      "image": "example.png"
+      "className": "test",
+      "text": "# Cattyverse Paddock Club Play To Earn Game!\n\nPaddock Club members integrate various reward systems and mining system into the project in order to earn real-life income with various Web3-based game modes, and bring the community together with events that will take place every week, where users can enjoy playing and earn at the same time, and create a social environment in various game modes from live music. It aims to strengthen the bond between members in the environment. You will be able to earn the coins in the game which is able to be bought items such as houses, cars, pets, etc. Character customization objects designed to be used in the game that you can use in the market, or you can use them to buy Cattyverse Paddock Club NFTs. By the rank system in the game, you will be able to obtain the specific title by earning the coins and be one of the most exclusive members of the Paddock Club.",
+      "image": "28.png"
+    },
+    {
+      "className": "test",
+      "text": "# The Low Down\n\n### PLAY TO EARN!\n\nPeople, who have the Cattyverse Paddock Club NFTs, will catch the earning NEAR coin opportunity in the Web3 game.\n\n ### $5,000 GIVEAWAY\n\n1 person who owns at least 10 of the Cattyverse Paddock Club NFTs will receive a $5000 prize in the biggest giveaway.\n\n### CATTYVERSE STYLE\n\n You will be able to add Cattyverse air to your style with a variety of clothing, hats and accessories.\n\n ### PADDOCK CLUB SPECIAL\n\n * The opportunity to earn all the coins which added to the pool system by participating to the multiplayer competition.\n * The opportunity to access to the events which we will organise the live music with the contracted artists and DJs in the Paddock Club.\n * The opportunity to earn prestige rewards exclusive to Paddock Club such as NFT, Coin, Tittle, and etc.",
+      "image": "953.png"
+    },
+    {
+      "className": "test",
+      "text": "# FAQ\n\n * Supply 3,333 NFTS\n * Whitelist Price: 4 NEAR\n * Mint Price: 6 NEAR\n * WL Mint: June 09  16:00 UTC (VIP Sale Length 22 Hours)\n * Public Mint: June 10\n * Royality: %7\n\nNote: At MOST 5x NFTs will be available to mint per user.",
+      "image": "2287.png"
     }
   ]
 }

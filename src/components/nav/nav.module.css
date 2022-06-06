@@ -1,44 +1,75 @@
 /* This is a CSS Module; see https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/ */
-.bg {
-  background-color: var(--gray-1);
-  padding: var(--spacing-m) 0;
-  margin-bottom: var(--spacing-l);
+.nav {
+  overflow: hidden;
+  padding: var(--spacing-xs);
+  padding-bottom: calc(720 / 1920 * 100%) !important;
+  position: relative;
+  width: 100vw !important;
+  margin-bottom: var(--spacing-xl);
 }
 
-.content {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-m);
-  justify-content: space-between;
+@media (min-width: 600px) {
+  .nav {
+    padding: var(--spacing-l);
+  }
 }
 
-.content > * {
-  flex: 1 1 auto;
-}
-
-.social {
-  display: flex;
-  gap: var(--spacing-s);
-}
-
-.social svg {
-  height: var(--spacing-xl);
-  width: var(--spacing-xl);
-  vertical-align: middle;
-}
-.social svg path {
-  fill: var(--accent);
+.nav video {
+  height: 100%;
+  left: 50%;
+  width: 100% !important;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%) scale(1.33);
+  z-index: -1;
 }
 
 .actions {
   display: flex;
-  gap: var(--spacing-m);
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  position: relative;
+  top: 1em;
 }
 
-.button {
-  font-size: var(--spacing-l);
-  font-weight: var(--fw-black);
+.actions > button {
+  text-align: right;
+}
+
+.social {
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  gap: var(--spacing-s);
+  position: relative;
+  z-index: 1;
+}
+
+.actions span + .social {
+  position: relative;
+  top: -0.5em;
+}
+
+.social svg {
+  color: var(--accent);
+  height: var(--spacing-m);
+  width: var(--spacing-m);
+  vertical-align: middle;
+}
+
+.main {
+  align-items: center;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: minmax(246px, 1fr) auto;
+  gap: var(--spacing-xs);
+}
+
+.main > :first-child {
+  text-align: left;
+}
+
+.main > :last-child {
+  text-align: right;
+  word-break: break-word;
 }

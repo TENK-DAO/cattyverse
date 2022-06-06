@@ -3,12 +3,89 @@
  * If you omit any values, defaults will be used.
  */
 $white: #fdfdfd;
-$black: #262626;
-$accent: #e73b93;
+$black: #0c1226;
+$accent: #14C2A3;
 $secondary: adjust-color($accent, $hue: 90deg);
 
-.this-class-is-set-in-i18n-files h1 {
-  /**
-    * You could add other styles like this
-    */
+h1, h2 {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+p, ul {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+div p, div ul {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  // border: 2px solid #105252;
+  --b: 2px; /* thickness of the border */
+  --c: #105252; /* color of the border */
+  --w: 20px; /* width of border */
+
+  background-size: var(--w) var(--w);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background: #0e2431;
+  border: 2px solid #105252;
+  padding: 18px 20px;
+  position: relative;
+  margin-bottom: 24px;
+  z-index: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+div p::after,
+div p::before,
+div ul::after,
+div ul::before {
+  background: #15293a;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  background: #0e2230;
+  z-index: -1;
+}
+
+div p::before,
+div ul::before {
+  width: calc(102% - 3rem);
+  height: calc(100% + 4px);
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+div p::after,
+div ul::after {
+  height: calc(100% - 2rem);
+  width: calc(100% + 4px);
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+div p:hover,
+div ul:hover {
+  border-color: #14c2a3;
+  box-shadow: 0 0px 32px 0 rgba(34, 183, 143, 0.5);
+  transition: all 0.3s ease;
+  border: 2px solid #14C2A3;
+}
+
+.test img {
+  border-radius: 50%;
 }

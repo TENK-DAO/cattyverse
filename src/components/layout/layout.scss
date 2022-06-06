@@ -2,6 +2,7 @@
 @import "./atcb.css";
 @import "../../../config/styles.scss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
 
 $white: white !default;
 $black: black !default;
@@ -19,6 +20,7 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
   }
 
   /* Font Family */
+  --heading: "Chakra Petch", sans-serif;
   --sans: Montserrat, sans-serif;
   --monospace: "Source Code Pro", monospace;
 
@@ -187,14 +189,15 @@ select {
 
 button,
 .button {
-  background: linear-gradient(to right, var(--secondary), var(--accent) 66%);
+  // background: linear-gradient(to right, var(--secondary), var(--accent) 66%);
   border-radius: var(--br-base);
-  border: none;
+  border: 2px solid var(--color);
+  border-radius: var(--br-base);
   color: var(--bg);
   cursor: pointer;
   display: inline-block;
   font-size: inherit;
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-bold);
   position: relative;
 }
 
@@ -203,7 +206,7 @@ select {
   background-color: var(--bg);
   border: 1px solid var(--gray-3);
   border-radius: var(--br-base);
-  color: inherit;
+  color: var(--fg);
 }
 
 input,
@@ -217,27 +220,31 @@ button:hover,
 .button:hover,
 button:focus,
 .button:focus {
-  background-color: var(--gray-9);
+  box-shadow: 0 0 10px 4px var(--color-shadow);
   text-decoration: none;
 }
 button:active,
 .button:active {
-  top: 1px;
+  top: 2px;
 }
 button.secondary,
 .button.secondary {
-  background-color: transparent;
-  border: 1px solid var(--gray-3);
-  color: var(--fg);
-}
-button.secondary:focus,
-button.secondary:hover,
-.button.secondary:focus,
-.button.secondary:hover {
-  background-color: transparent;
-  border-color: var(--gray-5);
+  --color: #{$secondary};
+  border: none;
+  border-radius: 0;
+  font-family: var(--heading);
+  font-size: 1.25em;
+  padding: 0;
+  line-height: 1;
 }
 
+button.secondary:hover,
+.button.secondary:hover,
+button.secondary:focus,
+.button.secondary:focus {
+  box-shadow: none;
+  text-shadow: 0px 3px var(--primary);
+}
 button.link,
 .button.link {
   background: none;
@@ -261,6 +268,7 @@ select:hover,
 select:focus,
 select:active {
   border-color: var(--gray-5);
+  background-color: var(--bg);
 }
 
 select {
@@ -279,11 +287,11 @@ select.error {
 }
 
 input {
-  caret-color: var(--accent);
+  caret-color: var(--primary);
 }
 
 input::selection {
-  background-color: var(--accent);
+  background-color: var(--primary);
   color: var(--bg);
 }
 

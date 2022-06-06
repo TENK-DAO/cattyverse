@@ -3,21 +3,42 @@
   background-repeat: no-repeat;
   background-position: bottom 50% right var(--spacing-s);
   background-size: var(--spacing-s);
+  border-radius: var(--br-small);
+  border: none;
   padding-right: var(--spacing-l);
 }
 
+.trigger,
 .item {
-  color: inherit;
-  cursor: pointer;
+  border-radius: var(--br-small);
+  color: var(--fg);
+  font-family: "Chakra Petch", sans-serif;
   font-weight: var(--fw-regular);
-  padding: 0 var(--spacing-s);
 }
 
+.trigger {
+  max-width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 600px) {
+  .trigger {
+    max-width: unset;
+  }
+}
+
+.trigger:focus,
+.trigger:hover,
 .item:focus,
 .item:hover {
+  border: none;
   box-shadow: none;
   outline: none;
+  background-color: var(--bg);
 }
+
 .item:focus,
 .item:hover {
   background-color: var(--gray-1);
@@ -26,7 +47,11 @@
 .trigger:active,
 .item:active {
   top: 0;
-  border-color: var(--gray-4);
+  border: none;
+}
+
+.trigger[data-state="open"] {
+  background-color: var(--bg);
 }
 
 .item {
@@ -39,8 +64,13 @@
 
 .content {
   background-color: var(--bg);
-  border-radius: var(--br-base);
+  border-radius: var(--br-small);
   border: 1px solid var(--gray-4);
   box-shadow: rgba(22, 23, 24, 0.35) 0px 10px 38px -10px, rgba(22, 23, 24, 0.2) 0px 10px 20px -15px;
   padding: var(--spacing-xs);
+}
+
+.item {
+  cursor: pointer;
+  padding: 0 var(--spacing-s);
 }
