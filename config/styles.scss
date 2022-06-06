@@ -3,7 +3,7 @@
  * If you omit any values, defaults will be used.
  */
 $white: #fdfdfd;
-$black: #0c1226;
+$black: #0e2431;
 $accent: #14C2A3;
 $secondary: adjust-color($accent, $hue: 90deg);
 
@@ -28,7 +28,7 @@ div p, div ul {
   background-size: var(--w) var(--w);
   background-origin: border-box;
   background-repeat: no-repeat;
-  background: #0e2431;
+  background: var(--cb);
   border: 2px solid #105252;
   padding: 18px 20px;
   position: relative;
@@ -47,7 +47,7 @@ div p::after,
 div p::before,
 div ul::after,
 div ul::before {
-  background: #15293a;
+  background: var(--cb);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -55,7 +55,6 @@ div ul::before {
   transition: all 0.3s ease;
   content: "";
   position: absolute;
-  background: #0e2230;
   z-index: -1;
 }
 
@@ -80,10 +79,10 @@ div ul::after {
 
 div p:hover,
 div ul:hover {
-  border-color: #14c2a3;
+  border-color: $accent;
   box-shadow: 0 0px 32px 0 rgba(34, 183, 143, 0.5);
   transition: all 0.3s ease;
-  border: 2px solid #14C2A3;
+  border: 2px solid $accent;
 }
 
 .test img {

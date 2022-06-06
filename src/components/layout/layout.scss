@@ -1,8 +1,8 @@
 @import "./a11y.css";
 @import "./atcb.css";
 @import "../../../config/styles.scss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap");
 
 $white: white !default;
 $black: black !default;
@@ -54,11 +54,16 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
   /* TODO: move these base colors to settings.json or similar */
   --white: #{$white};
   --black: #{$black};
+  --card: #{#0e2431};
   --accent: #{$accent};
   --secondary: #{$secondary};
 
+  $accent: #14c2a3;
+  $secondary: adjust-color($accent, $hue: 90deg);
+
   --fg: var(--black);
   --bg: var(--white);
+  --cb: var(--white);
 
   --gray-1: #{adjust-color($black, $alpha: -0.9)};
   --gray-2: #{adjust-color($black, $alpha: -0.8)};
@@ -71,9 +76,11 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
   --gray-9: #{adjust-color($black, $alpha: -0.1)};
 
   --red: #fc5b5b;
+
   @media (prefers-color-scheme: dark) {
-    --bg: var(--black);
     --fg: var(--white);
+    --bg: var(--black);
+    --cb: var(--card);
 
     --gray-1: #{adjust-color($white, $alpha: -0.9)};
     --gray-2: #{adjust-color($white, $alpha: -0.8)};
@@ -309,13 +316,13 @@ input::selection {
   grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
   margin: var(--spacing-m) 0;
 
-  &>* {
+  & > * {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-m);
   }
 
-  &>a {
+  & > a {
     color: var(--fg);
     transform: scale(100%);
     transition: transform 75ms;
