@@ -71,7 +71,7 @@
   padding: var(--spacing-m);
   border-radius: var(--br-base);
   border-color: var(--accent);
-  box-shadow: 0 0px 32px 0 rgba(34, 183, 143, 0.5);
+  box-shadow: var(--glow);
   transition: all 0.3s ease;
   border: 2px solid var(--accent);
 }

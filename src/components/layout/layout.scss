@@ -57,6 +57,7 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
   --card: #{#0e2431};
   --accent: #{$accent};
   --secondary: #{$secondary};
+  --glow: #{0 0px 18px 0 rgba(13, 13, 13, 0.5)};
 
   $accent: #14c2a3;
   $secondary: adjust-color($accent, $hue: 90deg);
@@ -81,6 +82,7 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
     --fg: var(--white);
     --bg: var(--black);
     --cb: var(--card);
+    --glow: #{0 0px 18px 0 rgba(34, 183, 143, 0.5)};
 
     --gray-1: #{adjust-color($white, $alpha: -0.9)};
     --gray-2: #{adjust-color($white, $alpha: -0.8)};

@@ -79,7 +79,7 @@ div ul::after {
 div p:hover,
 div ul:hover {
   border-color: $accent;
-  box-shadow: 0 0px 32px 0 rgba(34, 183, 143, 0.5);
+  box-shadow: var(--glow);
   transition: all 0.3s ease;
   border: 2px solid $accent;
 }
