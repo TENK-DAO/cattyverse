@@ -27,7 +27,7 @@ export default function Nav() {
             src="../../../config/images/cattyverse-logo.png"
             alt="Cattyverse Logo"
             loading="eager"
-            height={70}
+            height={150}
           />
         </h1>
         <div className={css.actions}>

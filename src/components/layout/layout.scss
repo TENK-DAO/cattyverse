@@ -48,7 +48,7 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
   --input-height--small: 40px;
 
   /* Border Radius */
-  --br-base: 4px;
+  --br-base: 40px;
 
   /* Colors */
   /* TODO: move these base colors to settings.json or similar */
@@ -190,22 +190,21 @@ button,
 .button,
 input,
 select {
-  font: inherit;
+  font-family: var(--heading);
   outline: none;
 }
 
 button,
 .button {
-  // background: linear-gradient(to right, var(--secondary), var(--accent) 66%);
   border-radius: var(--br-base);
-  border: 2px solid var(--color);
-  border-radius: var(--br-base);
-  color: var(--bg);
+  border: 2px solid var(--accent);
   cursor: pointer;
   display: inline-block;
   font-size: inherit;
   font-weight: var(--fw-bold);
+  color: var(--accent);
   position: relative;
+  background: none;
 }
 
 input,
@@ -227,13 +226,16 @@ button:hover,
 .button:hover,
 button:focus,
 .button:focus {
-  box-shadow: 0 0 10px 4px var(--color-shadow);
+  box-shadow: 0 0px 18px 0 rgba(34, 183, 143, 0.5);
+  transition: all 0.3s ease;
   text-decoration: none;
 }
+
 button:active,
 .button:active {
   top: 2px;
 }
+
 button.secondary,
 .button.secondary {
   --color: #{$secondary};
