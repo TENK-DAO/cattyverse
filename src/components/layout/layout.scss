@@ -58,6 +58,7 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
   --accent: #{$accent};
   --secondary: #{$secondary};
   --glow: #{0 0px 18px 0 rgba(13, 13, 13, 0.5)};
+  --glow-xl: #{0 0px 18px 0 rgba(15, 15, 15, 0.7)};
 
   $accent: #14c2a3;
   $secondary: adjust-color($accent, $hue: 90deg);
@@ -83,6 +84,7 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
     --bg: var(--black);
     --cb: var(--card);
     --glow: #{0 0px 18px 0 rgba(34, 183, 143, 0.5)};
+    --glow-xl: #{0 0px 18px 0 rgba(36, 186, 146, 0.7)};
 
     --gray-1: #{adjust-color($white, $alpha: -0.9)};
     --gray-2: #{adjust-color($white, $alpha: -0.8)};
@@ -228,7 +230,7 @@ button:hover,
 .button:hover,
 button:focus,
 .button:focus {
-  box-shadow: 0 0px 18px 0 rgba(34, 183, 143, 0.5);
+  box-shadow: var(--glow);
   transition: all 0.3s ease;
   text-decoration: none;
 }
@@ -240,21 +242,21 @@ button:active,
 
 button.secondary,
 .button.secondary {
-  --color: #{$secondary};
   border: none;
   border-radius: 0;
   font-family: var(--heading);
   font-size: 1.25em;
   padding: 0;
   line-height: 1;
+  color: var(--white);
 }
 
 button.secondary:hover,
 .button.secondary:hover,
 button.secondary:focus,
 .button.secondary:focus {
-  box-shadow: none;
-  text-shadow: 0px 3px var(--primary);
+  text-shadow: 0px 2px var(--accent);
+  background: none;
 }
 button.link,
 .button.link {
@@ -279,7 +281,7 @@ select:hover,
 select:focus,
 select:active {
   border-color: var(--gray-5);
-  background-color: var(--bg);
+  // background-color: var(--bg);
 }
 
 select {
@@ -298,7 +300,7 @@ select.error {
 }
 
 input {
-  caret-color: var(--primary);
+  caret-color: var(--accent);
 }
 
 input::selection {

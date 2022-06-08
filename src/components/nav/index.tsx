@@ -64,7 +64,7 @@ export default function Nav() {
           </div>
         </div>
       </div>
-      <div className={css.video}>
+      <div>
         <Video src="hero-video.mp4" autoPlay loop />
       </div>
     </nav>

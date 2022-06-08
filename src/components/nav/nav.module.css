@@ -6,6 +6,7 @@
   position: relative;
   width: 100vw !important;
   margin-bottom: var(--spacing-xl);
+  color: var(--accent);
 }
 
 @media (min-width: 600px) {
@@ -32,16 +33,19 @@
   background-color: var(--card);
   position: relative;
   width: 100vw;
+  color: var(--accent);
 }
 
 .main > :first-child {
   text-align: left;
-  padding: var(--spacing-m)
+  padding: var(--spacing-m);
+  color: var(--accent);
 }
 
 .main > :last-child {
   text-align: right;
   word-break: break-word;
+  color: var(--accent);
 }
 
 .social {
@@ -62,16 +66,31 @@
 .button {
   font-size: var(--spacing-l);
   font-weight: var(--fw-black);
+  color: var(--accent);
 }
 
 .actions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-s);
-  position: relative;
-  padding: var(--spacing-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    position: relative;
+    padding: var(--spacing-m);
 }
 
 .actions > button {
   text-align: center;
 }
+
+.content > * {
+  flex: 1 1 auto;
+}
+
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  justify-content: space-between;
+}
+

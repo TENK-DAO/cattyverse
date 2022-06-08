@@ -4,3 +4,4 @@ export const main: string;
 export const social: string;
 export const button: string;
 export const actions: string;
+export const content: string;

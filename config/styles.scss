@@ -15,6 +15,15 @@ p, ul {
   font-family: "IBM Plex Mono", monospace;
 }
 
+.slider-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.cta {
+  margin: 0 auto;
+}
+
 div p, div ul {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
