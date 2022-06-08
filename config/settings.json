@@ -1,16 +1,16 @@
 {
   "author": "@TenKBay",
-  "siteUrl": "https://tenk-dao.github.io/frontend-starter",
+  "siteUrl": "https://cattyverse.pages.dev/",
   "contractName": "v2.tenk.testnet",
-  "image": "tenk-logo.png",
+  "image": "cattyverse-promo.png",
   "social": [
     {
-      "href": "https://discord.com/invite/UY9Xf2k",
+      "href": "https://discord.gg/paddockclub",
       "img":  "discord.svg",
       "alt": "Discord"
     },
     {
-      "href": "https://twitter.com/TenKBay",
+      "href": "https://twitter.com/CattyverseNFT",
       "img":  "twitter.svg",
       "alt": "Twitter"
     }
