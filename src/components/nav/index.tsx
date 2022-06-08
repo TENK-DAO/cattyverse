@@ -20,14 +20,14 @@ export default function Nav() {
   if (!locale) return null
   return (
     <nav className={css.nav}>
-      <Video src="hero-video.mp4" autoPlay loop />
       <div className={css.main}>
         <h1>
           <StaticImage
             src="../../../config/images/cattyverse-logo.png"
             alt="Cattyverse Logo"
             loading="eager"
-            height={150}
+            height={100}
+            className="logo"
           />
         </h1>
         <div className={css.actions}>
@@ -45,16 +45,27 @@ export default function Nav() {
               />
             </span>
           ) : (
-            <button className="secondary" onClick={signIn}>{locale.connectWallet}</button>
+            <button className="secondary" onClick={signIn}>
+              {locale.connectWallet}
+            </button>
           )}
           <div className={css.social}>
             {settings.social.map(({ href, img, alt }) => (
-              <a href={href} target="_blank" rel="noopener noreferrer" title={alt} key={alt}>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={alt}
+                key={alt}
+              >
                 <Image src={img} alt={alt} />
               </a>
             ))}
           </div>
         </div>
+      </div>
+      <div className={css.video}>
+        <Video src="hero-video.mp4" autoPlay loop />
       </div>
     </nav>
   )

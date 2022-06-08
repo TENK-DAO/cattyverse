@@ -1,7 +1,7 @@
 /* This is a CSS Module; see https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/ */
 .nav {
   overflow: hidden;
-  padding: var(--spacing-xs);
+  /* padding: var(--spacing-xs); */
   padding-bottom: calc(720 / 1920 * 100%) !important;
   position: relative;
   width: 100vw !important;
@@ -10,17 +10,16 @@
 
 @media (min-width: 600px) {
   .nav {
-    padding: var(--spacing-l);
+    /* padding: var(--spacing-l); */
   }
 }
 
 .nav video {
   height: 100%;
-  left: 50%;
-  width: 100% !important;
+  width: 100vw !important;
+  margin: 0 auto;
   position: absolute;
-  top: 0;
-  transform: translateX(-50%) scale(1.33);
+  transform: scale(1.33);
   z-index: -1;
 }
 
@@ -30,10 +29,14 @@
   justify-content: space-between;
   grid-template-columns: minmax(246px, 1fr) auto;
   gap: var(--spacing-s);
+  background-color: var(--card);
+  position: relative;
+  width: 100vw;
 }
 
 .main > :first-child {
   text-align: left;
+  padding: var(--spacing-m)
 }
 
 .main > :last-child {
@@ -66,14 +69,7 @@
   flex-direction: column;
   gap: var(--spacing-s);
   position: relative;
-  top: 1em;
-  background-color: var(--bg);
   padding: var(--spacing-m);
-  border-radius: var(--br-base);
-  border-color: var(--accent);
-  box-shadow: var(--glow);
-  transition: all 0.3s ease;
-  border: 2px solid var(--accent);
 }
 
 .actions > button {
