@@ -1,18 +1,15 @@
 /* This is a CSS Module; see https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/ */
+
+h1 {
+  color: var(--white);
+}
+
 .nav {
   overflow: hidden;
-  /* padding: var(--spacing-xs); */
   padding-bottom: calc(720 / 1920 * 100%) !important;
   position: relative;
   width: 100vw !important;
   margin-bottom: var(--spacing-xl);
-  color: var(--accent);
-}
-
-@media (min-width: 600px) {
-  .nav {
-    /* padding: var(--spacing-l); */
-  }
 }
 
 .nav video {
@@ -25,72 +22,68 @@
 }
 
 .main {
-  align-items: center;
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: minmax(246px, 1fr) auto;
-  gap: var(--spacing-s);
   background-color: var(--card);
   position: relative;
   width: 100vw;
-  color: var(--accent);
 }
 
-.main > :first-child {
+.main .button {
   text-align: left;
-  padding: var(--spacing-m);
-  color: var(--accent);
 }
 
-.main > :last-child {
-  text-align: right;
-  word-break: break-word;
-  color: var(--accent);
-}
-
-.social {
-  display: flex;
-  gap: var(--spacing-m);
-  margin: 0 auto;
-}
-
-.social svg {
-  height: var(--spacing-m);
-  width: var(--spacing-m);
-  vertical-align: middle;
-}
-.social svg path {
-  fill: var(--accent);
-}
-
-.button {
-  font-size: var(--spacing-l);
-  font-weight: var(--fw-black);
-  color: var(--accent);
-}
-
-.actions {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-s);
-    position: relative;
-    padding: var(--spacing-m);
-}
-
-.actions > button {
+.actions>button {
   text-align: center;
 }
 
-.content > * {
-  flex: 1 1 auto;
-}
-
-
 .content {
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-m);
   justify-content: space-between;
 }
 
+.content>* {
+  flex: 1 1 auto;
+}
+
+.social {
+  display: flex;
+  gap: var(--spacing-s);
+}
+
+.social svg {
+  height: var(--spacing-xl);
+  width: var(--spacing-xl);
+  vertical-align: middle;
+}
+
+.social svg path {
+  fill: var(--accent);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-m);
+  padding: var(--spacing-m);
+  position: relative;
+}
+
+.actions > * {
+  flex: 1 1 auto;
+}
+
+.actions > h1 {
+  flex: 4 1 auto;
+}
+
+.actions .social {
+  margin-left: auto;
+}
+
+.button {
+  font-size: var(--spacing-l);
+  font-weight: var(--fw-black);
+}

@@ -257,6 +257,7 @@ button.secondary:focus,
 .button.secondary:focus {
   text-shadow: 0px 2px var(--accent);
   background: none;
+  box-shadow: none;
 }
 button.link,
 .button.link {
@@ -281,7 +282,7 @@ select:hover,
 select:focus,
 select:active {
   border-color: var(--gray-5);
-  // background-color: var(--bg);
+  background-color: var(--bg);
 }
 
 select {
