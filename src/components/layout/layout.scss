@@ -11,12 +11,12 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
 
 :root {
   /* Typographic Scale */
-  --base-font-size: 14px;
+  --base-font-size: 16px;
   @media (min-width: 415px) {
-    --base-font-size: 16px;
+    --base-font-size: 18px;
   }
   @media (min-width: 600px) {
-    --base-font-size: 18px;
+    --base-font-size: 20px;
   }
 
   /* Font Family */
@@ -139,6 +139,14 @@ h6 {
   font-weight: var(--fw-bold);
   margin: 0;
   line-height: var(--lh-headings);
+}
+
+p {
+  font-size: var(--base-font-size) !important;
+}
+
+ul {
+  list-style-type: none;
 }
 
 img,
